@@ -1,81 +1,321 @@
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Hi</title>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css'>
-<link rel='stylesheet' href='https://s.plurk.com/0e89357f530f0a843c68440a020d4eb5.css'><link rel="stylesheet" href="./style.css">
+<!--  •°• It's Me Lief | Not Hacker •°•  --> 
 
+<!--
+°• Gw cuma bisa buat sc nya doang, klo ngedepes masih nub bwangg 
+°• Nih pake sc depes gw yg dulu pernah gw pake tebas index web nasa :D
+°• Lu pake nih sc, dijamin auto minder para mastah 
+°• Tapi kalo mau pake/recode, izin dulu bwangg :)
+°• Jika mau request sc, bilang saya ya, insya Allah. saya bisa membantu
+°• Insipirasi warna by colorhunt.co 
+-->
+
+<!-- Version 10 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="[ L13F.R ]">
+
+	<!-- Title -->
+	<title>Script Deface by ./L i e f</title>
+
+	<!-- Icon Title -->
+	<link rel="icon" type="image/gif" href="https://c.top4top.io/p_1959mtf411.png">
+
+	<style type="text/css">
+		/* Google Font | Poppins & Montserrat Alternates */
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600&display=swap');
+		@import url('https://fonts.googleapis.com/css?family=Tangerine');
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			background: linear-gradient(45deg, #eb3349, #f45c43);
+			overflow: hidden;
+		}
+		body:before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 120px;
+			background-image: url(https://d.top4top.io/p_196177gy21.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			z-index: 999;
+		}
+
+		.content {
+			color: #ecf0f3;
+			text-align: center;
+			padding: 0 10px;
+		}
+
+		.title {
+			margin-top: -140px;
+			font-family: 'Tangerine', cursive;
+			font-size: 3.8em;
+			font-weight: 600;
+			letter-spacing: 2px;
+		}
+
+		.sub-title {
+			margin-top: 5px;
+			font-family: 'Poppins', sans-serif;
+			font-size: 1.2em;
+			font-weight: 400;
+			letter-spacing: 1px;
+		}
+
+		/* Btn | Play & Pause */
+		button {
+			position: absolute;
+			padding: 0 10px 0;
+			width: 100px;
+			height: 35px;
+			font-family: 'Poppins', sans-serif;
+			font-size: 1em;
+			color: #ecf0f3;
+			background: linear-gradient(155deg, #303132, #29292a);
+  			border: none;
+  			outline: none;
+  			cursor: pointer;
+  			z-index: 999;
+		}
+		button:hover {
+			background: #36393f;
+    		box-shadow: inset 5px 5px 8px #242526,
+                inset -5px -5px 10px #363738;
+			animation: animate 4s linear infinite;
+		}
+		@keyframes animate {
+			0% {background: #687980}
+			14% {background: #393e46}
+			28% {background: #334443}
+			42% {background: #1b1a17; box-shadow: none;}
+			56% {background: #1b1717}
+			70% {background: #364547}
+			84% {background: #536162}
+			100% {background: #5b5b5b}
+		}
+		.btn-play {
+			margin: 30px -110px;
+			border-radius: 30px 0 30px 0;
+		}
+		.btn-pause {
+			margin: 30px 5px;
+			border-radius: 0 30px 0 30px;
+		}
+		/* End */
+
+		/* Responsive for Mobile */
+		@media screen and (max-width: 468px) {
+			body:before {
+				animation: animate 12s linear infinite;
+			}
+			@keyframes animate {
+				0% {
+					background-position: 0; 
+				}
+				50% {
+					background-position: 100%; 
+				}
+				100% {
+					background-position: 0; 
+				}
+			}
+			
+			.content {
+				padding: 0 5px;
+			}
+			.title {
+				font-size: 3em;
+			}
+			.sub-title {
+				font-size: 1em;
+			}
+			.btn-play {
+				margin: 30px -105px;
+			}
+			.btn-pause {
+				margin: 30px 5px;
+			}
+		}
+		/* End */
+
+		/* Animation Canvas | Efek balon terbang */
+		.particles-js-canvas-el {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	</style>
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div class="resume">
-  <div class="base">
-    <div class="profile">
-      <div class="photo"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/764024/profile/profile-512.jpg"/></div>
-      <div class="info">
-        <h4 class="name">Simi</h4><small class="job">Front-end Web Developer</small>
-      </div>
-    </div>
-    <div class="about">
-      <h3>About me</h3>Hi! I am currently studying hard, I hope my progress and growth can be seen, please give me more advice.<br/>I like anime movie and beautiful little things, welcome to communicate (´∀ ').<br/><br/><br/>
-      <div class="address"><i class="fa fa-map-marker"></i><span>Jakarta, Indonesia</span></div>
-      <div class="email"><i class="fa fa-envelope"></i><span>bugreprt@gmail.com</span></div>
-    </div>
-    <div class="follow">
-      <h3>Follow</h3>
-      <div class="box"><a href="https://faceebok.com/b3lalang"><i class="fa fa-facebook"></i></a>
-                       <a href="https://twitter.com/inisimiiii"><i class="fa fa-twitter"></i></a>
-      </div>
-    </div>
-  </div>
-  <div class="func">
-    <div class="work">
-      <h3><i class="fa fa-briefcase"></i>Work Exrerience</h3>
-      <ul>
-        <li><span>Front-end Web Developer</span><small>Apr 2018 - Dec 2021</small><br/><br/><br/><br/></li>
-      </ul>
-    </div>
-    <div class="skills-prog">
-      <h3><i class="fa fa-code"></i>Programming Skills</h3>
-      <ul>
-        <li data-percent="92"><span>HTML5 & PUG</span>
-          <div class="skills-bar">
-            <div class="bar"></div>
-          </div>
-        </li>
-        <li data-percent="96"><span>CSS3 & SASS</span>
-          <div class="skills-bar">
-            <div class="bar"></div>
-          </div>
-        </li>
-        <li data-percent="40"><span>JavaScript</span>
-          <div class="skills-bar">
-            <div class="bar"></div>
-          </div>
-        </li>
-        <li data-percent="60"><span>jQuery</span>
-          <div class="skills-bar">
-            <div class="bar"></div>
-          </div>
-        </li>
-        <li data-percent="33"><span>NodeJS</span>
-          <div class="skills-bar">
-            <div class="bar"></div>
-          </div>
-        </li>
-        <li data-percent="52"><span>VueJS</span>
-          <div class="skills-bar">
-            <div class="bar"></div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script><script  src="./script.js"></script>
+	<div class="content" id="particles-js">
+		<div class="title">It's Me Lief</div>
+		<div class="sub-title">Setelah seseorang pergi, saya menjadi sadar bahwa orang baik akan bersanding dengan<br>orang yang baik pula.</div>
+		<div id="play-pause">
+			<button class="btn-play">Play</button>
+			<button class="btn-pause">Pause</button>
+		</div>
+		<audio id="lagu"><source src="https://j.top4top.io/m_1940towjx3.mp3" type="audio/mpeg"></audio>
+	</div>
+	
+	<!-- Lagu | Button Play & Pause -->
+	<script type="text/javascript">
+		var lagu = document.getElementById('lagu');
+		var controlBtn = document.getElementById('play-pause');
 
+		function playPause() {
+			if (lagu.paused) {
+				lagu.play();
+				controlBtn.className = "btn-pause";
+			} else {
+				lagu.pause();
+				controlBtn.className = "btn-play";
+			}
+		}
+		controlBtn.addEventListener("click", playPause);
+		track.addEventListener("ended", function() {
+			controlBtn.className = "btn-play";
+		});
+	</script>
+	<!-- End -->
+
+	<!-- Particles JS -->
+	<script src="particles.js"></script>
+	<script type="text/javascript">
+		particlesJS('particles-js',
+			{
+				"particles": {
+					"number": {
+						"value": 40,
+						"density": {
+							"enable": true,
+							"value_area": 800
+						}
+					},
+					"color": {
+						"value": "#a6b1e1"
+					},
+					"shape": {
+						"type": "circle",
+						"stroke": {
+							"width": 0,
+							"color": "#000000"
+						},
+						"polygon": {
+							"nb_sides": 5
+						},
+						"image": {
+          					"src": "img/github.svg",
+          					"width": 100,
+          					"height": 100
+        				}
+					},
+					"opacity": {
+						"value": 1,
+        				"random": false,
+        				"anim": {
+        					"enable": false,
+          					"speed": 1,
+          					"opacity_min": 0.1,
+          					"sync": false
+        				} 
+					},
+					"size": {
+						"value": 5,
+        				"random": true,
+        				"anim": {
+        					"enable": false,
+          					"speed": 40,
+          					"size_min": 0.1,
+          					"sync": false
+        				}
+					},
+					"line_linked": {
+						"enable": false,
+        				"distance": 150,
+        				"color": "#ffffff",
+        				"opacity": 0.4,
+        				"width": 1
+					},
+					"move": {
+						"enable": true,
+        				"speed": 40,
+        				"direction": "top",
+        				"random": false,
+        				"straight": false,
+        				"out_mode": "out",
+        				"attract": {
+        		        	"enable": false,
+          					"rotateX": 600,
+          					"rotateY": 1200
+        				}
+					}
+				},
+				"interactivity": {
+					"detect_on": "canvas",
+      				"events": {
+      					"onhover": {
+      						"enable": false,
+      						"mode": "repulse"
+      					},
+      					"onclick": {
+      						"enable": true,
+      						"mode": "push"
+      					},
+      					"resize": true
+      				},
+      				"modes": {
+      					"grab": {
+      						"distance": 400,
+      						"line_linked": {
+      							"opacity": 1
+      						}
+      					},
+      					"buble": {
+      						"distance": 400,
+          					"size": 40,
+          					"duration": 2,
+          					"opacity": 8,
+          					"speed": 3
+      					},
+      					"repulse": {
+      						"distance": 200
+      					},
+      					"push": {
+      						"particles_nb": 4
+      					},
+      					"remove": {
+      						"particles_nb": 2
+      					}
+      				}
+				},
+				"retina_detect": true,
+				"config_demo": {
+				 	"hide_card": false,
+      			 	"background_color": "#b61924",
+      			 	"background_image": "",
+      			 	"background_position": "50% 50%",
+      			 	"background_repeat": "no-repeat",
+      			 	"background_size": "cover"
+				}
+			}
+		);
+	</script>
 </body>
 </html>
